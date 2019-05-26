@@ -31,4 +31,27 @@ class UI {
         </div>
         `;
     }
+
+    // if users not found display the alert
+    ShowAlert(message) {
+
+
+
+        const div = document.createElement('div');
+        div.className = "alert alert-danger";
+        div.appendChild(document.createTextNode(message));
+
+        const container = document.querySelector('.searchContainer');
+        const search = document.querySelector('.search');
+
+        container.insertBefore(div, search);
+
+    }
+
+
+
+    // if user clear the search bar clear the previous data from ui
+    clearProfile() {
+        this.profile.innerHTML = '';
+    }
 }
