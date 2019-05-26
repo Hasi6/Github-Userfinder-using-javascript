@@ -47,6 +47,13 @@ class UI {
 
         container.insertBefore(div, search);
 
+        // disspiar the alert after 5 secounds
+        setTimeout(() => {
+            div.remove();
+        }, 5000);
+
+        this.clearProfile();
+
     }
 
     // clear the alerts before show them
