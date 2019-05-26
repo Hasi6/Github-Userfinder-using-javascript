@@ -35,7 +35,8 @@ class UI {
     // if users not found display the alert
     ShowAlert(message) {
 
-
+        // Clear the all alerts if there is any alert before otherwise show every alert line by line
+        this.clearAlert();
 
         const div = document.createElement('div');
         div.className = "alert alert-danger";
@@ -48,7 +49,15 @@ class UI {
 
     }
 
+    // clear the alerts before show them
+    clearAlert() {
+        const currentAlert = document.querySelector('.alert');
 
+        if (currentAlert) {
+            currentAlert.remove();
+        }
+
+    }
 
     // if user clear the search bar clear the previous data from ui
     clearProfile() {
